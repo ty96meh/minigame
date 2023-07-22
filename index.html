@@ -9,14 +9,16 @@
         <link rel="stylesheet" type="text/css" href="quizStyle.css"> 
     </head>
 
-    <body>       
-        <div class="FrontPage">
-            <h1><u>Confirm Registration</u></h1>
-            <p>Name:</p><h3 class="Username"></h3></p>
-            <p>Total number of questions: 6</p>
-            <p>Are you ready?</p>
-            <button type="submit" class="btn" onclick="start()">Start!</button>
+    <body>
+        <div class="home-page">
+            <h1>Quiz</h1>
+            <div class="username">             
+                    <label for="Username"><p>Please enter your name:</p></label>
+                    <input type="text" id="Username" name="Username" placeholder="Your Name">
+                    <br><br><br>
+                    <button type="submit" class="btn" onclick="submit()">Submit</button>
+            </div> 
         </div>
+        <script src="name.js"></script>
     </body>
-    <script src="ConfirmName.js"></script>
 </html>
