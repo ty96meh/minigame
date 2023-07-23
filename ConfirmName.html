@@ -3,9 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <title>Quiz</title>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="quizStyle.css"> 
     </head>
 
@@ -18,5 +16,26 @@
             <button type="submit" class="btn" onclick="start()">Start!</button>
         </div>
     </body>
-    <script src="ConfirmName.js"></script>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        var currentName = urlParams.get("Username");
+        console.log(currentName);
+
+        const FrontPage = document.querySelector(".FrontPage");
+
+        function Name(){
+            FrontPage.querySelector(".Username").innerHTML = currentName;
+            }
+
+        window.onload = function(){
+            Name();
+        }
+
+
+        function start(){
+            location.href = 'QuizQuestion.html?Username='+ currentName;
+        }
+
+    </script>
 </html>
