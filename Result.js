@@ -20,7 +20,7 @@ function Result(){
     resultPage.querySelector(".total-wrong").innerHTML = wrongAnswer;
     const percentage = (correctAnswer/totalQuestion)*100;
     resultPage.querySelector(".total-percentage").innerHTML = percentage.toFixed() + "%";
-    resultPage.querySelector(".insert").innerHTML = "INSERT INTO demo_table (used_time, accuracy, submitted_DataTime) VALUES ('end_time','percentage','finishTime')";
+    
 }
 
 
